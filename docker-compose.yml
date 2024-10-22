@@ -10,7 +10,7 @@ services:
       - "VIRTUAL_HOST=fava.zairecloud.pt"
       - "VIRTUAL_PORT=5000"
       - "LETSENCRYPT_HOST=fava.zairecloud.pt"
-      - "BEANCOUNT_FILE=/bean/general.beancount"
+      - "BEANCOUNT_FILE=/bean/main.beancount"
     volumes:
       - /media/nextcloud/data/nunes/files/Library/Documents/Finance/:/bean
     restart: unless-stopped
