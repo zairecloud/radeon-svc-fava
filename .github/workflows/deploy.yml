@@ -1,5 +1,5 @@
 name: Deploy
-on: [push, workflow_dispatch]
+on: [push]
 env:
   DEPLOY_DIR: ${{ github.event.repository.name }}
 jobs:
@@ -30,5 +30,4 @@ jobs:
           key: ${{ secrets.RADEON_SSH_PRIVATE_KEY }}
           port: ${{ secrets.RADEON_SSH_PORT }}
           script: docker compose -f ${{ env.DEPLOY_DIR }}/docker-compose.yml up -d
-            
 
